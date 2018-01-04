@@ -1,0 +1,412 @@
+// out: packages.css, compress: true, sourceMap: false
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+// color     light grey = rgb(216, 216, 216)
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+div {
+    font-family: chivo;
+}
+
+.pRotate {
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.nRotate {
+    transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.hide {
+    opacity: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: 40vh auto 40rem;
+    grid-template-areas: "home" "content" "footer";
+    .homeScreen {
+        grid-area: home;
+        background-image: url(../images/adventure-3.jpg);
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        display: grid;
+        grid-template-columns: 1fr 6fr 1fr;
+        grid-auto-rows: 8rem;
+        .menuScreen {
+            position: fixed;
+            z-index: 10;
+            overflow: hidden;
+            text-align: center;
+            padding-top: 10rem;
+            font-size: 3rem;
+            color: white;
+            box-shadow: 1px 1px 1px;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(59, 59, 73);
+            transition: ease-in 0.20s;
+            top: -150%;
+            .formScreen {
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-rows: 5rem 50rem;
+                .formTitle {
+                    grid-column-start: 5;
+                    grid-column-end: 9;
+                    grid-row-start: 1;
+                    grid-row-end: 2;
+                    background-color: black;
+                    line-height: 5rem;
+                    font-size: 1.5rem;
+                    text-align: left;
+                    padding-left: 2rem;
+                }
+                .optionBox {
+                    grid-column-start: 5;
+                    grid-column-end: 6;
+                    grid-row-start: 2;
+                    grid-row-end: 3;
+                    background-color: rgb(10, 9, 9);
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-auto-rows: 3rem;
+                    padding-top: 2rem;
+                    grid-gap: 2rem;
+                    font-size: 1.5rem;
+                    line-height: 3rem;
+                    .options {
+                        background-color: black;
+                        padding: 2rem;
+                    }
+                }
+                .infoBox {
+                    grid-column-start: 6;
+                    grid-column-end: 9;
+                    grid-row-start: 2;
+                    grid-row-end: 3;
+                    background-color: #f0efee;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-auto-rows: 6rem;
+                    grid-gap: 1rem;
+                    text-align: left;
+                    .input-group {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        padding: 1rem;
+                        input[type=text],
+                        input[type=email],
+                        {
+                            grid-column-start: 1;
+                            grid-column-end: 3;
+                            grid-row-start: 1;
+                            grid-row-end: 3;
+                            background: none;
+                            border: none;
+                            border-bottom: 0.2rem solid black;
+                            font-size: 1.6rem;
+                            color: rgb(37, 37, 37);
+                            line-height: 4rem;
+                            &:focus {
+                                outline: none;
+                                line-height: normal;
+                            }
+                        }
+                        label {
+                            grid-column-start: 1;
+                            grid-column-end: 13;
+                            grid-row-start: 1;
+                            grid-row-end: 3;
+                            color: rgb(32, 32, 32);
+                            font-size: 2rem;
+                            ;
+                            line-height: 4rem;
+                            pointer-events: none;
+                            transition: 0.25s;
+                        }
+                        .btn {
+                            grid-column-start: 1;
+                            grid-column-end: 2;
+                            grid-row-start: 1;
+                            grid-row-end: 3;
+                        }
+                    }
+                }
+            }
+        }
+        .logo {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            background-image: url(../images/SVG/Default.svg);
+            background-repeat: no-repeat;
+            padding: 2rem;
+        }
+        .menu {
+            grid-column-start: 3;
+            grid-column-end: -1;
+            background-color: transparent;
+            z-index: 11;
+            .menuBtn {
+                position: fixed;
+                background-color: transparent;
+                right: 3rem;
+                width: 3vw;
+                height: 5vh;
+                top: 2rem;
+                .firstBar {
+                    position: relative;
+                    float: left;
+                    background-color: white;
+                    border-radius: 2rem;
+                    width: 100%;
+                    height: 0.5rem;
+                    margin-bottom: 0.5rem;
+                    transition: 0.25s;
+                }
+                .secondBar {
+                    position: relative;
+                    float: left;
+                    background-color: white;
+                    border-radius: 2rem;
+                    width: 100%;
+                    height: 0.5rem;
+                    margin-bottom: 0.5rem;
+                    transition: 0.25s;
+                }
+                .thirdBar {
+                    position: relative;
+                    background-color: white;
+                    margin-top: 1rem;
+                    border-radius: 2rem;
+                    width: 100%;
+                    height: 0.5rem;
+                    transition: 0.25s;
+                }
+                .fourthBar {
+                    position: relative;
+                    float: left;
+                    background-color: white;
+                    border-radius: 2rem;
+                    width: 100%;
+                    height: 0.5rem;
+                    transition: 0.25s;
+                }
+            }
+        }
+    }
+    .contentScreen {
+        grid-area: content;
+        background-color: transparent;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 60rem auto;
+        grid-template-areas: "top" "middle" "bottom" "service";
+
+        .topContainer {
+            display: grid;
+            grid-area: top;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(12, 1fr);
+            grid-gap: 3rem;
+            background-color: white;
+
+            .leftContainer{
+                display: grid;
+                grid-template-columns: 5fr 1fr ;
+                grid-template-rows: auto 3rem ;
+                background-color: aqua;
+                grid-column-start: 3;
+                grid-column-end: 5;
+                grid-row-start: 3;
+                grid-row-end: 9;
+            }
+
+            .luxuriousBox {
+                grid-column-start: 5;
+                grid-column-end: 7;
+                grid-row-start: 3;
+                grid-row-end: 6;
+                background-image: url(../images/adventure-4.jpg);
+                background-size: cover;
+                background-position: top;
+                background-repeat: no-repeat;
+                box-shadow: 4px 4px 12px black;
+            }
+            .honeymoonBox {
+                grid-column-start: 7;
+                grid-column-end: 9;
+                grid-row-start: 3;
+                grid-row-end: 6;
+                background-image: url(../images/adventure-3.jpg);
+                background-size: cover;
+                background-position: top;
+                background-repeat: no-repeat;
+                box-shadow: 4px 4px 12px black;
+            }
+            .advantureBox {
+                grid-column-start: 9;
+                grid-column-end: 11;
+                grid-row-start: 3;
+                grid-row-end: 6;
+                background-image: url(../images/adventure-5.jpg);
+                background-size: cover;
+                background-position: top;
+                background-repeat: no-repeat;
+                box-shadow: 4px 4px 12px black;
+            }
+            .familyBox {
+                grid-column-start: 5;
+                grid-column-end: 7;
+                grid-row-start: 6;
+                grid-row-end: 9;
+                background-image: url(../images/adventure-7.jpg);
+                background-size: cover;
+                background-position: top;
+                background-repeat: no-repeat;
+                box-shadow: 4px 4px 12px black;
+            }
+            .weekendBox {
+                grid-column-start: 7;
+                grid-column-end: 9;
+                grid-row-start: 6;
+                grid-row-end: 9;
+                background-image: url(../images/adventure-8.jpg);
+                background-size: cover;
+                background-position: top;
+                background-repeat: no-repeat;
+                box-shadow: 4px 4px 12px black;
+            }
+            .backpakkingBox {
+                grid-column-start: 9;
+                grid-column-end: 11;
+                grid-row-start: 6;
+                grid-row-end: 9;
+                background-image: url(../images/adventure-2.jpg);
+                background-size: cover;
+                background-position: top;
+                background-repeat: no-repeat;
+                box-shadow: 4px 4px 12px black;
+            } // .topLeft{
+            //     grid-area: topLeft;
+            //     grid-column-start: 2;
+            //     grid-column-end: 7;
+            //     grid-row-start: 2;
+            //     grid-row-end: 6;
+            //     background-image: url(../images/adventure-4.jpg);
+            //     background-size:cover;
+            //     background-position: top;
+            //     background-repeat: no-repeat;
+            // }
+            // .topRight{
+            //     grid-area: topRirht;
+            //     grid-column-start: 8;
+            //     grid-column-end: 12;
+            //     grid-row-start: 4;
+            //     grid-row-end: 13;
+            //     background-image: url(../images/adventure-3.jpg);
+            //     background-size:cover;
+            //     background-position: top;
+            //     background-repeat: no-repeat;
+            // }
+            // .topBottom{
+            //     grid-area: topBottom;
+            //     grid-column-start: 3;
+            //     grid-column-end: 7;
+            //     grid-row-start: 7;
+            //     grid-row-end: 11;
+            //     background-color: transparent;
+            //     .topTitle{
+            //         position: relative;
+            //         font-size: 5rem;
+            //         color: white;
+            //         font-family: chivo;
+            //         background-color: transparent;
+            //     }
+            //     .top-lineWrap{
+            //         position: relative;
+            //         margin-left: 3rem;
+            //         margin-top: 2.5rem;
+            //         width: 3rem;
+            //         height: 0.2rem;
+            //         background-color: red;
+            //     }
+            //     .topContent{
+            //         position: relative;
+            //         margin-left: 3rem;
+            //         margin-top: 2.5rem;
+            //         font-size: 2rem;
+            //         font-family: chivoLight;
+            //         color: white;
+            //         background-color: transparent;
+            //     }
+            // }
+        }
+    }
+    .footerScreen {
+        display: grid;
+        grid-area: footer;
+        background-color: #e8f0ec;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20rem 20rem;
+        padding-top: 2rem;
+        .infoBox {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 5rem;
+            grid-gap: 1rem;
+            padding: 10rem;
+            .input-group {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                input[type=text],
+                input[type=email],
+                {
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                    background: none;
+                    border: none;
+                    border-bottom: 0.2rem solid black;
+                    font-size: 1.6rem;
+                    color: rgb(37, 37, 37);
+                    line-height: 4rem;
+                    &:focus {
+                        outline: none;
+                        line-height: normal;
+                    }
+                }
+                label {
+                    grid-column-start: 1;
+                    grid-column-end: 13;
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                    color: rgb(32, 32, 32);
+                    font-size: 2rem;
+                    ;
+                    line-height: 4rem;
+                    pointer-events: none;
+                    transition: 0.25s;
+                }
+            }
+        }
+    }
+}
