@@ -6,9 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../public/css/index.css" />
-    <script language="JavaScript" type="text/JavaScript" src="../public/js/jquery.min.js"></script>
-    <script language="JavaScript" type="text/JavaScript" src="../public/js/index.js"></script>
-    <script language="JavaScript" type="text/JavaScript" src="../public/js/jquery-template.js"></script>
+    
 </head>
 
 <body>
@@ -89,7 +87,7 @@
                 <div class="backpackingBox">
                     <div class="backpackingOverlay"></div>
                 </div>
-               
+               <div class="packageOptions"></div>
             </div>
             <div class="midContainer">
                 <div class="midLeft"></div>
@@ -170,5 +168,16 @@
             <div class="contactBox"></div>
         </div>
     </div>
+
+    <script id="entry-template" type="text/x-handlebars-template">
+        <div>
+            {{text}}
+        </div>
+
+    </script>
+    <script  src="../public/js/handlebars-v4.0.11.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="../public/js/jquery.min.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="../public/js/index.js"></script>
+    
 </body>
 </html>
