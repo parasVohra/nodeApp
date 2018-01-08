@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+    //menu button animation
     $('.input-group input').val("");
     $(".menuBtn").click(function(){
         $(".secondBar").toggleClass("pRotate");
@@ -25,22 +27,45 @@ $(document).ready(function() {
         
     })
 
-    var source = $("#entry-template").html();
-    var template = Handlebars.compile(source);
 
-    var context = { text : "fuck yeah "};
-    var html = template(context);
-    $(".packageOptions").append(html);
+// click event binding 
+        $(".pack").click(function(){
+            $(".pack").css("display","none");
+            var value = $(this).attr('value');
+            console.log("clicked");
+            console.log(value);
 
+            
+        })
+
+
+
+
+
+    //data from json file
+     var source = $("#entry-template").html();
+     var template = Handlebars.compile(source);
     $.ajax({
-        url: 'public/data/data.json',
-        dataType:'json',
-        type:'get',
-        cache: false,
-        success: function (data){
-            console.log(data);
-        }
-    });
+        type: "GET",
+        url: '/public/data/data.json',                        
+        dataType:"json",
+        success: function(response){
+                alert(response);  
+                var fuck = template(response)
+                $(".packageOptions").append(fuck);
+                $(response.packages).each(function(index , value){
+                    console.log(value)
+                })
+    },
+        error: function(jqXHR, textStatus, errorThrown){
+            alert('error');
+        }         
+      });
+
+
+   
+    
+    
 
    
 

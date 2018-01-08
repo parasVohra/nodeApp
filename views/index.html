@@ -69,22 +69,22 @@
         </div>
         <div class="contentScreen">
             <div class="topContainer">
-                <div class="luxuriousBox">
+                <div class="luxuriousBox pack" value="luxury">
                     <div class="luxuriousOverlay"></div>
                 </div>
-                <div class="honeymoonBox">
+                <div class="honeymoonBox pack" value="honeymoon">
                     <div class="honeymoonOverlay"></div>
                 </div>
-                <div class="advantureBox">
+                <div class="advantureBox pack" value="adventure">
                     <div class="advantureOverlay"></div>
                 </div>
-                <div class="familyBox">
+                <div class="familyBox pack" value="family">
                     <div class="familyOverlay"></div>
                 </div>
-                <div class="weekendBox">
+                <div class="weekendBox pack" value="weekend">
                     <div class="weekendOverlay"></div>
                 </div>
-                <div class="backpackingBox">
+                <div class="backpackingBox pack" value="backpacking">
                     <div class="backpackingOverlay"></div>
                 </div>
                <div class="packageOptions"></div>
@@ -171,7 +171,9 @@
 
     <script id="entry-template" type="text/x-handlebars-template">
         <div>
-            {{text}}
+            {{#each packages}}
+            {{{packageName}}}<br>
+            {{/each}}
         </div>
 
     </script>
@@ -180,7 +182,6 @@
     <script language="JavaScript" type="text/JavaScript" src="../public/js/index.js"></script>
     <script>
 
-         
        
   
     </script>
