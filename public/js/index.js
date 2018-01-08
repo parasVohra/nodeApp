@@ -32,9 +32,17 @@ $(document).ready(function() {
     var html = template(context);
     $(".packageOptions").append(html);
 
-    $.getJSON('../data/data.json',function (data){
-        console.log("worker");
-    })
+    $.ajax({
+        url: 'public/data/data.json',
+        dataType:'json',
+        type:'get',
+        cache: false,
+        success: function (data){
+            console.log(data);
+        }
+    });
+
+   
 
     
    
