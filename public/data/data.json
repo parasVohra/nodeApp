@@ -1,14 +1,12 @@
 {
-    "packages": 
-    [
+    "packages": [
         {
             "packageName": "Amazing Seychelles",
             "bgImage":"",
             "pacakgeInfo":"",
             "days": 6,
             "nights": 5,
-            "dayInfo":
-            [
+            "dayInfo": [
                 {
                     "name":"Arrive Mahe Island",
                     "text":"On arrival you will be met and transferred to the hotel by standard coach. Check‐in and enjoy your day at leisure. Overnight in Mahe Island.",

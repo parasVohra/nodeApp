@@ -31,6 +31,12 @@ $(document).ready(function() {
     var context = { text : "fuck yeah "};
     var html = template(context);
     $(".packageOptions").append(html);
+
+    $.getJSON('../data/data.json',function (data){
+        console.log("worker");
+    })
+
+    
    
 });
 
